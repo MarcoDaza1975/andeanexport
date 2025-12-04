@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andean Export - Conectando Bolivia y Uruguay</title>
+    <meta name="description" content="Andean Export ayuda a que productos bolivianos con alma propia lleguen al mercado uruguayo de manera profesional y sostenible." />
+    <link rel="icon" type="image/svg+xml" href="https://lucide.dev/favicon.ico" />
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              andean: {
+                green: '#1B998B',
+                gold: '#F4A261',
+                dark: '#264653',
+                light: '#E9C46A'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      /* Custom utility for hiding scrollbar in some browsers if needed */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 selection:bg-andean-green selection:text-white">
+
+    <!-- HEADER -->
+    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm py-4 shadow-sm">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" class="text-2xl font-bold text-andean-green tracking-tight group">
+                Andean <span class="text-andean-gold group-hover:text-amber-500 transition-colors">Export</span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Inicio</a>
+                <a href="#nosotros" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Sobre Nosotros</a>
+                <a href="#propuesta" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Propuesta</a>
+                <a href="#fases" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Fases</a>
+                <a href="#aliados" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Aliados</a>
+                <a href="#contacto" class="text-slate-600 hover:text-andean-green font-medium transition-colors text-sm uppercase tracking-wide">Contacto</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-slate-600 focus:outline-none">
+                <!-- Menu Icon -->
+                <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                <!-- Close Icon (Hidden by default) -->
+                <svg id="icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-lg">
+            <nav class="flex flex-col py-4 px-4 space-y-4">
+                <a href="#inicio" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Inicio</a>
+                <a href="#nosotros" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Sobre Nosotros</a>
+                <a href="#propuesta" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Propuesta</a>
+                <a href="#fases" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Fases</a>
+                <a href="#aliados" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Aliados</a>
+                <a href="#contacto" class="mobile-link text-slate-600 hover:text-andean-green font-medium text-lg block border-b border-slate-50 pb-2">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-slate-50 to-emerald-50/30">
+            <!-- Background Elements -->
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-andean-gold/10 blur-3xl pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-andean-green/10 blur-3xl pointer-events-none"></div>
+
+            <div class="container mx-auto px-4 md:px-6 relative z-10 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-andean-green/10 text-andean-green text-sm font-semibold mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-andean-green opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-andean-green"></span>
+                        </span>
+                        31ª Rueda Internacional de Negocios - ICAM
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                        Tu producto merece <br class="hidden md:block" />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-andean-green to-emerald-600">
+                            cruzar fronteras
+                        </span>
+                    </h1>
+                    
+                    <p class="text-lg md:text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                        En <strong>Andean Export</strong> conectamos marcas bolivianas con clientes en Uruguay, combinando estrategia, logística y corazón.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-andean-green hover:bg-emerald-700 text-white font-bold rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2 group">
+                            Quiero llevar mi marca a Uruguay
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                        </a>
+                        
+                        <a href="#fases" class="w-full sm:w-auto px-8 py-4 bg-white text-slate-700 border border-slate-200 hover:border-andean-gold hover:text-andean-gold font-bold rounded-lg shadow-sm hover:shadow-md transition-all flex items-center justify-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                            Conoce nuestro plan por fases
+                        </a>
+                    </div>
+
+                    <p class="mt-12 text-slate-500 italic font-medium">
+                        "No solo movemos cajas, movemos historias."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOBRE NOSOTROS -->
+        <section id="nosotros" class="py-20 bg-white">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Text Content -->
+                    <div class="order-2 lg:order-1">
+                        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6 relative">
+                            <span class="bg-andean-gold/20 px-1 -ml-1">Un puente real</span> entre Bolivia y Uruguay
+                        </h2>
+                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                            Andean Export nace de la experiencia real de entender el mercado uruguayo desde dentro: precios, hábitos de consumo, impuestos, logística y canales.
+                        </p>
+                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
+                            Juntos, creemos que cada producto boliviano que llega a Uruguay lleva detrás familias, trabajo y sueños. Nuestro trabajo es que ese viaje valga la pena.
+                        </p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                            <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-andean-green shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <svg class="text-andean-green w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <h3 class="font-bold text-slate-900">Bolivia</h3>
+                                </div>
+                                <p class="font-semibold text-lg text-emerald-800">Marco A. Daza</p>
+                                <p class="text-sm text-slate-500 mt-2">
+                                    Acompaña a los productores, entiende sus márgenes, su esfuerzo y su historia. Experto en inteligencia de negocios.
+                                </p>
+                            </div>
+
+                            <div class="bg-slate-50 p-6 rounded-xl border-l-4 border-andean-gold shadow-sm">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <svg class="text-andean-gold w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                    <h3 class="font-bold text-slate-900">Uruguay</h3>
+                                </div>
+                                <p class="font-semibold text-lg text-emerald-800">Nicolás Lorenzo</p>
+                                <p class="text-sm text-slate-500 mt-2">
+                                    Ayuda a aterrizar la historia en un mercado exigente. Conecta redes y conoce el ecosistema local.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Image -->
+                    <div class="order-1 lg:order-2 relative">
+                        <div class="aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-slate-200 relative shadow-2xl">
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="Reunión de negocios" class="w-full h-full object-cover opacity-90" />
+                            <div class="absolute inset-0 bg-gradient-to-tr from-andean-green/80 to-andean-gold/40 mix-blend-multiply"></div>
+                            <div class="absolute bottom-6 left-6 right-6 text-white">
+                                <p class="text-2xl font-bold">Experiencia Binacional</p>
+                                <p class="opacity-90">Uniendo lo mejor de dos mundos.</p>
+                            </div>
+                        </div>
+                        <!-- Decorative dots -->
+                        <div class="absolute -z-10 top-10 -right-10 w-24 h-24 text-andean-gold/20">
+                            <svg viewBox="0 0 100 100" fill="currentColor">
+                                <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                                <circle cx="2" cy="2" r="2" />
+                                </pattern>
+                                <rect width="100" height="100" fill="url(#dots)" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICIOS / PROPUESTA -->
+        <section id="propuesta" class="py-20 bg-slate-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        ¿Qué hacemos por tu marca?
+                    </h2>
+                    <p class="text-slate-600 max-w-2xl mx-auto">
+                        Transformamos la complejidad de exportar en un proceso ordenado y estratégico.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col items-start group">
+                        <div class="mb-6 p-3 bg-slate-50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-andean-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Leemos el mercado por ti</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Analizamos precios, competencia, categorías y canales en Uruguay para que tomes decisiones con datos.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col items-start group">
+                        <div class="mb-6 p-3 bg-slate-50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-andean-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Diseñamos tu entrada</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Definimos contigo cómo entrar: e-commerce, farmacias, tiendas naturales o una combinación por etapas.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col items-start group">
+                        <div class="mb-6 p-3 bg-slate-50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-andean-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Logística experta</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Trabajamos con operadores especializados para que el almacenamiento y la última milla no sean un problema.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-shadow duration-300 border border-slate-100 flex flex-col items-start group">
+                        <div class="mb-6 p-3 bg-slate-50 rounded-lg group-hover:scale-110 transition-transform duration-300">
+                             <svg class="w-10 h-10 text-andean-gold" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 14h2a2 2 0 1 0 0-4h-2V7h2a2 2 0 0 1 2 2v3.332"/><path d="M11 13a6 6 0 0 1-6 6 4 4 0 0 1-4-4 4 4 0 0 1 4-4v0"/><path d="m13 7 2-4 3 3 1 5"/></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-3">Acompañamos tu marca</h3>
+                        <p class="text-slate-600 leading-relaxed text-sm">Creemos en relaciones a largo plazo. Te ayudamos a construir presencia, no solo a enviar un pallet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FASES -->
+        <section id="fases" class="py-20 bg-white relative overflow-hidden">
+            <div class="container mx-auto px-4 md:px-6 relative z-10">
+                <div class="text-center mb-16">
+                    <span class="text-andean-gold font-bold tracking-wider uppercase text-sm mb-2 block">Estrategia Escalonada</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+                        Un plan claro para crecer <br class="hidden md:block"/> sin perder el control
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Phase 1 -->
+                    <div class="relative group">
+                        <div class="h-full bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-andean-green/30 transition-all hover:shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl text-slate-900">01</div>
+                            <div class="w-12 h-12 bg-andean-green rounded-xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform text-white">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">
+                                <span class="text-sm font-normal text-slate-500 block mb-1">Fase 01</span>
+                                E-commerce y última milla
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Probamos el mercado con inteligencia: ventas online, pagos fáciles y entregas confiables. Menos riesgo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="relative group">
+                        <div class="h-full bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-andean-green/30 transition-all hover:shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl text-slate-900">02</div>
+                            <div class="w-12 h-12 bg-andean-gold rounded-xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform text-white">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">
+                                <span class="text-sm font-normal text-slate-500 block mb-1">Fase 02</span>
+                                Farmacias y cadenas
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Cuando el producto encaja, abrimos camino en cadenas como San Roque, donde la confianza es clave.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 3 -->
+                    <div class="relative group">
+                        <div class="h-full bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-andean-green/30 transition-all hover:shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-10 font-black text-6xl text-slate-900">03</div>
+                            <div class="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center shadow-md mb-6 group-hover:scale-110 transition-transform text-white">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-800 mb-4">
+                                <span class="text-sm font-normal text-slate-500 block mb-1">Fase 03</span>
+                                Tiendas naturales
+                            </h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Ideal para productos con identidad, valor nutricional y origen andino. Tu historia suma.</p>
+                        </div>
+                    </div>
+
+                    <!-- Phase 4 -->
+                    <div class="relative group">
+                        <div class="h-full bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-andean-green/30 transition-all hover:shadow-lg relative overflow-hidden">
+                            <div class="absolute top-0 right-0 p-4 opacity-
