@@ -742,4 +742,629 @@
       background: rgba(27,153,139,0.06);
       color: #065f46;
       font-size: 0.9rem;
-      b
+      border: 1px solid rgba(45,212,191,0.4);
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+      padding: 0.6rem 1.1rem;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .whatsapp-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: #ffffff;
+    }
+
+    .whatsapp-btn:hover {
+      background: #16a34a;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 1.5rem 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #6b7280;
+      border-top: 1px solid #e5e7eb;
+      margin-top: 0;
+      background: #0b1220;
+      color: #e5e7eb;
+    }
+
+    footer span {
+      color: var(--andean-gold);
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 980px) {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 6.5rem;
+      }
+
+      .hero-card {
+        margin-top: 1.5rem;
+      }
+
+      .services-grid,
+      .phases-grid,
+      .ally-boxes {
+        grid-template-columns: repeat(2, minmax(0,1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      nav.mobile-open {
+        display: block;
+        position: absolute;
+        top: 54px;
+        left: 0;
+        right: 0;
+        background: #0b1220;
+        border-top: 1px solid rgba(148,163,184,0.4);
+      }
+
+      nav.mobile-open ul {
+        flex-direction: column;
+        padding: 0.8rem 1.5rem 1rem;
+        gap: 0.8rem;
+      }
+
+      .hero-grid {
+        gap: 1.8rem;
+      }
+
+      .about-image {
+        height: 230px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-grid,
+      .phases-grid,
+      .ally-boxes {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="brand-block">
+        <a href="#inicio" class="logo">Andean <span>Export</span></a>
+        <div class="tagline">De los Andes a Uruguay, con propósito</div>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="mainNav">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Sobre Nosotros</a></li>
+          <li><a href="#propuesta">Propuesta</a></li>
+          <li><a href="#fases">Fases</a></li>
+          <li><a href="#aliados">Aliados</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO WRAPPER -->
+  <div class="hero-wrapper">
+    <section id="inicio" class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- LEFT -->
+          <div>
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              31ª Rueda Internacional de Negocios – ICAM · Cochabamba
+            </div>
+            <h1>
+              Tu producto merece<br />
+              <span>cruzar fronteras con sentido</span>
+            </h1>
+            <p class="hero-sub">
+              En <strong>Andean Export</strong> ayudamos a que productos bolivianos con alma propia
+              lleguen a Uruguay. No solo pensamos en pallets y tarifas: pensamos en las familias, en
+              la historia detrás de cada tableta, cada botella y cada grano andino.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="#contacto" class="btn btn-primary">
+                <span>Quiero llevar mi marca a Uruguay</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#fases" class="btn btn-secondary">
+                <span>Conoce nuestro plan por fases</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="7 18 13 12 7 6"></polyline>
+                  <polyline points="11 18 17 12 11 6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <p class="hero-quote">
+              “No solo movemos cajas, movemos historias, personas y futuros compartidos.”
+            </p>
+          </div>
+
+          <!-- RIGHT "GRAPHIC" -->
+          <div class="hero-card">
+            <div class="hero-chip">
+              <span></span>
+              Andean Export · Operación binacional
+            </div>
+
+            <div class="hero-metric">
+              <strong>Bolivia → Uruguay</strong><br />
+              Chocolates, snacks, vinos, granos andinos y alimentos naturales que buscan un mercado
+              serio, ordenado y con poder de compra.
+            </div>
+
+            <div class="hero-pill-row">
+              <div class="hero-pill">E-commerce Uruguay</div>
+              <div class="hero-pill">Logística & última milla</div>
+              <div class="hero-pill">Farmacias & retail</div>
+              <div class="hero-pill">Tiendas naturales</div>
+            </div>
+
+            <div class="hero-floating-tag">
+              Binacional: Equipo Bolivia · Equipo Uruguay
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros">
+    <div class="container">
+      <h2>Un puente real entre Bolivia y Uruguay</h2>
+      <p class="section-intro">
+        Andean Export nace de caminar ferias, hablar con productores, escuchar acentos uruguayos
+        en Montevideo y sentir el pulso real del mercado. No trabajamos desde un escritorio:
+        trabajamos desde la experiencia y el corazón de dos países.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="highlight">
+            Somos un puente binacional para productores que quieren ir más allá de vender en su ciudad
+            o su país. Acompañamos a quienes sienten que su producto ya maduró lo suficiente como para
+            cruzar frontera, pero necesitan un plan, una mano y un aliado que entienda el camino.
+          </p>
+          <p>
+            Creemos que detrás de cada producto hay familias, trabajo y sueños. Nuestro rol es que ese
+            esfuerzo llegue a un mercado ordenado, exigente y lleno de oportunidades, sin perder la
+            esencia de donde nació.
+          </p>
+
+          <div class="about-cards">
+            <div class="about-card">
+              <h3>Bolivia</h3>
+              <p class="name">Equipo Bolivia</p>
+              <p>
+                Acompaña a los productores, entiende sus márgenes, su esfuerzo y su historia.
+                Une la mirada técnica de la inteligencia de negocios con el respeto profundo por
+                el trabajo de las familias bolivianas.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3>Uruguay</h3>
+              <p class="name">Equipo Uruguay</p>
+              <p>
+                Ayuda a aterrizar esa historia en un mercado exigente. Conoce la dinámica uruguaya,
+                las reglas del juego y las oportunidades reales para que cada producto encuentre
+                el canal adecuado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="about-image-content">
+            <div class="about-image-title">
+              Dos países, una cordillera, un mismo puente.
+            </div>
+            <div class="about-image-sub">
+              Experiencia binacional para decisiones más inteligentes y humanas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider-top"></div>
+
+  <!-- PROPUESTA -->
+  <section id="propuesta">
+    <div class="container">
+      <h2>¿Qué hacemos por tu marca?</h2>
+      <p class="section-intro">
+        Transformamos la complejidad de exportar en un proceso ordenado, medible y escalable.
+        Tú te ocupas del producto, nosotros del puente.
+      </p>
+
+      <div class="services-grid">
+        <!-- 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </div>
+          <h3>Leemos el mercado por ti</h3>
+          <p>
+            Analizamos precios, competencia, categorías y canales en Uruguay para que tus decisiones
+            no sean un salto al vacío, sino un paso pensado con datos y contexto real.
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h7v7H3z"></path>
+              <path d="M14 3h7v7h-7z"></path>
+              <path d="M14 14h7v7h-7z"></path>
+              <path d="M3 14h7v7H3z"></path>
+            </svg>
+          </div>
+          <h3>Diseñamos tu entrada</h3>
+          <p>
+            No todos los productos entran por la misma puerta. Definimos contigo si empezar por
+            e-commerce, farmacias, tiendas naturales o una mezcla inteligente, cuidando tus riesgos
+            y tu inversión.
+          </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 21h4"></path>
+              <path d="M10 21V9"></path>
+              <path d="m5 9 5-7 5 7"></path>
+              <path d="M4 14h4"></path>
+              <path d="M16 14h4"></path>
+              <path d="M4 18h2"></path>
+              <path d="M18 18h2"></path>
+            </svg>
+          </div>
+          <h3>Logística experta</h3>
+          <p>
+            Trabajamos con operadores especializados para que almacenamiento, distribución y última
+            milla sean parte de la solución, no del problema. Tú te concentras en tu producto,
+            nosotros en que llegue.
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20l9-16H3z"></path>
+            </svg>
+          </div>
+          <h3>Acompañamos tu marca</h3>
+          <p>
+            No creemos en envíos de una sola vez. Creemos en construir presencia, confianza y
+            relaciones de largo plazo entre tu marca y el mercado uruguayo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASES -->
+  <section id="fases">
+    <div class="container">
+      <h2>Un plan claro para crecer sin perder el control</h2>
+      <p class="section-intro">
+        No todos los productos necesitan el mismo camino. Por eso trabajamos por fases, cuidando
+        tus riesgos, tu inversión y la madurez de tu marca.
+      </p>
+
+      <div class="phases-grid">
+        <!-- F1 -->
+        <div class="phase-card">
+          <div class="phase-number">01</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h18l-2 13H5L3 3z"></path>
+              <circle cx="9" cy="19" r="1"></circle>
+              <circle cx="17" cy="19" r="1"></circle>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 1</div>
+          <div class="phase-title">E-commerce y última milla</div>
+          <p>
+            Probamos el mercado con inteligencia: ventas online, pagos simples y entregas confiables
+            con operadores logísticos. Es la forma más cuidada de escuchar al consumidor uruguayo sin
+            arriesgarlo todo.
+          </p>
+        </div>
+
+        <!-- F2 -->
+        <div class="phase-card">
+          <div class="phase-number">02</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 2</div>
+          <div class="phase-title">Farmacias y cadenas</div>
+          <p>
+            Cuando el producto encaja, buscamos cadenas como San Roque y otras redes donde la
+            confianza, la trazabilidad y la seriedad son clave. Aquí tu marca gana prestigio
+            y visibilidad.
+          </p>
+        </div>
+
+        <!-- F3 -->
+        <div class="phase-card">
+          <div class="phase-number">03</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 22h16"></path>
+              <path d="M5 22v-7l3-3 4 4 3-3 4 4v5"></path>
+              <circle cx="7" cy="5" r="2"></circle>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 3</div>
+          <div class="phase-title">Tiendas naturales & healthy</div>
+          <p>
+            El lugar ideal para productos con identidad, valor nutricional y raíces andinas. En estas
+            góndolas la historia importa tanto como el empaque: es donde tu relato y tu calidad se
+            encuentran con el cliente final.
+          </p>
+        </div>
+
+        <!-- F4 -->
+        <div class="phase-card">
+          <div class="phase-number">04</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h18v4H3z"></path>
+              <path d="M5 8v12"></path>
+              <path d="M10 8v12"></path>
+              <path d="M14 8v12"></path>
+              <path d="M19 8v12"></path>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 4</div>
+          <div class="phase-title">Supermercados</div>
+          <p>
+            No corremos por estar “en todos lados”. Llegamos a supermercados cuando la marca ya tiene
+            respaldo: datos, rotación, consumidores fieles y una historia que justifica estar en
+            la gran liga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIADOS -->
+  <section id="aliados">
+    <div class="container">
+      <h2>No trabajamos solos, trabajamos en red</h2>
+      <p class="section-intro">
+        Para que tu producto llegue bien, a tiempo y en buenas manos, nos apoyamos en aliados que ya
+        conocen el mercado uruguayo y sus reglas.
+      </p>
+
+      <div class="ally-boxes">
+        <div class="ally">
+          <span>Operadores logísticos (almacenamiento y última milla en Uruguay)</span>
+        </div>
+        <div class="ally">
+          <span>Cadenas de farmacias y salud</span>
+        </div>
+        <div class="ally">
+          <span>Tiendas naturales, healthy y gourmet</span>
+        </div>
+        <div class="ally">
+          <span>Plataformas de pago, e-commerce y marketplaces</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section id="por-que">
+    <div class="container">
+      <h2>¿Por qué trabajar con Andean Export?</h2>
+      <ul class="why-list">
+        <li>
+          Porque entendemos tanto el lado de la chacra, la planta y el taller, como el lado del Excel,
+          los márgenes y las cadenas de retail.
+        </li>
+        <li>
+          Porque ya hicimos el viaje, hablamos con empresas en Uruguay y sabemos qué funciona y qué no
+          para un producto boliviano.
+        </li>
+        <li>
+          Porque no te ofrecemos “exportar por exportar”, sino un camino con etapas, aprendizajes
+          y ajustes.
+        </li>
+        <li>
+          Porque creemos que cuando un producto boliviano llega bien a Uruguay, gana el productor,
+          gana el cliente y ganan los dos países.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Hablemos de tu producto</h2>
+      <p class="section-intro">
+        Si sentís que tu producto ya está listo para salir de Bolivia, pero todavía no sabes por dónde
+        empezar, este es el momento de conversar. A veces una buena llamada cambia el destino de una marca.
+      </p>
+
+      <div class="contact-grid">
+        <form id="contactForm">
+          <label for="empresa">Nombre de la empresa</label>
+          <input type="text" id="empresa" name="empresa" required />
+
+          <label for="contactoNombre">Persona de contacto</label>
+          <input type="text" id="contactoNombre" name="contactoNombre" required />
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="pais">País</label>
+          <input type="text" id="pais" name="pais" required />
+
+          <label for="producto">Tipo de producto</label>
+          <input type="text" id="producto" name="producto"
+                 placeholder="Chocolates, snacks, vinos, granos andinos, etc." required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.3rem;">
+            Enviar mensaje
+          </button>
+
+          <div id="successMessage" class="success-message">
+            Gracias, hemos recibido tu mensaje. Muy pronto nos pondremos en contacto contigo.
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Contacto en Bolivia:</strong> Equipo Bolivia</p>
+          <p><strong>Contacto en Uruguay:</strong> Equipo Uruguay</p>
+          <p>
+            Trabajamos con productores que quieren crecer con seriedad, datos claros y una estrategia
+            paso a paso. No buscamos volumen vacío, buscamos relaciones que tengan sentido.
+          </p>
+
+          <div class="contact-highlight">
+            Muchos productores empezaron igual: con una idea, un buen producto y mil dudas.
+            El primer paso es simple: hablemos y veamos si este puente tiene sentido para tu marca.
+          </div>
+
+          <a href="https://wa.me/59100000000" target="_blank" class="whatsapp-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 21l1.2-4.3A8 8 0 1112 20a8.3 8.3 0 01-4-1"></path>
+              <path d="M16 17.5c-.6.3-1.3.5-2 .5a5 5 0 01-5-5"></path>
+              <path d="M9 11l1.5-.5L11 12l1.5-.5L13 13"></path>
+            </svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 <span>Andean Export</span>. Todos los derechos reservados.  
+    Presente en la 31ª Rueda Internacional de Negocios – ICAM Cochabamba.
+  </footer>
+
+  <script>
+    // Menú móvil
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('mobile-open');
+    });
+
+    mainNav.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A' && mainNav.classList.contains('mobile-open')) {
+        mainNav.classList.remove('mobile-open');
+      }
+    });
+
+    // Formulario
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const requiredFields = ['empresa', 'contactoNombre', 'correo', 'pais', 'producto', 'mensaje'];
+      let valid = true;
+
+      requiredFields.forEach((id) => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = 'red';
+        } else {
+          field.style.borderColor = '#d1d5db';
+        }
+      });
+
+      if (!valid) return;
+
+      form.reset();
+      successMessage.style.display = 'block';
+
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 5000);
+    });
+  </script>
+
+</body>
+</html>
