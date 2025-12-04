@@ -1265,34 +1265,37 @@
       </p>
 
       <div class="contact-grid">
-        <form id="contactForm">
+        <form id="contactForm"
+      action="https://script.google.com/macros/s/AKfycbxPlBp5LcwfiOan1IXlWKIRgI2ZmVNXJBvXTfPKKH3cUwc4zvYcT8T39xvOa2nSaLGbYw/exec"
+      method="POST">
           <label for="empresa">Nombre de la empresa</label>
           <input type="text" id="empresa" name="empresa" required />
-
+        
           <label for="contactoNombre">Persona de contacto</label>
           <input type="text" id="contactoNombre" name="contactoNombre" required />
-
+        
           <label for="correo">Correo electrónico</label>
           <input type="email" id="correo" name="correo" required />
-
+        
           <label for="pais">País</label>
           <input type="text" id="pais" name="pais" required />
-
+        
           <label for="producto">Tipo de producto</label>
           <input type="text" id="producto" name="producto"
                  placeholder="Chocolates, snacks, vinos, granos andinos, etc." required />
-
+        
           <label for="mensaje">Mensaje</label>
           <textarea id="mensaje" name="mensaje" required></textarea>
-
+        
           <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.3rem;">
             Enviar mensaje
           </button>
-
+        
           <div id="successMessage" class="success-message">
             Gracias, hemos recibido tu mensaje. Muy pronto nos pondremos en contacto contigo.
           </div>
         </form>
+
 
         <div class="contact-info">
           <p><strong>Contacto en Bolivia:</strong> Equipo Bolivia</p>
