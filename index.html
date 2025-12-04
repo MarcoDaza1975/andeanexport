@@ -3,16 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andean Export - Conectando Bolivia y Uruguay</title>
-  <meta name="description" content="Andean Export ayuda a que productos bolivianos con alma propia lleguen al mercado uruguayo de manera profesional y sostenible." />
+  <title>Andean Export - De los Andes a Uruguay</title>
+  <meta name="description" content="Andean Export conecta productos bolivianos con el mercado uruguayo, uniendo estrategia, logística y propósito." />
+
+  <!-- Fuente Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --andean-green: #1B998B;
       --andean-gold:  #F4A261;
-      --andean-dark:  #264653;
+      --andean-dark:  #0B1F32;
+      --andean-deep:  #264653;
       --bg-light:     #F5F7FA;
       --text-main:    #1F2933;
+      --accent-soft:  #E9C46A33;
     }
 
     * {
@@ -26,8 +31,8 @@
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-      background-color: #f8fafc;
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f3f4f6;
       color: var(--text-main);
       line-height: 1.5;
     }
@@ -35,7 +40,7 @@
     a { text-decoration: none; color: inherit; }
 
     .container {
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 1.5rem;
     }
@@ -46,178 +51,329 @@
       top: 0;
       left: 0;
       width: 100%;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 1px 4px rgba(15,23,42,0.08);
+      background: linear-gradient(90deg, rgba(11,31,50,0.96), rgba(38,70,83,0.96));
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 10px rgba(15,23,42,0.35);
       z-index: 50;
+      color: #e5e7eb;
     }
 
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.8rem 1.5rem;
-      max-width: 1100px;
+      padding: 0.7rem 1.5rem;
+      max-width: 1120px;
       margin: 0 auto;
     }
 
     .logo {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       font-weight: 800;
-      color: var(--andean-green);
-      letter-spacing: 0.03em;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #f9fafb;
     }
 
     .logo span {
       color: var(--andean-gold);
     }
 
+    .tagline {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      opacity: 0.9;
+      letter-spacing: 0.12em;
+      margin-top: 0.1rem;
+    }
+
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+    }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 1.5rem;
-      font-size: 0.9rem;
+      font-size: 0.78rem;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.11em;
     }
 
     nav a {
-      color: #475569;
+      color: #e5e7eb;
       font-weight: 600;
+      position: relative;
     }
 
-    nav a:hover {
-      color: var(--andean-green);
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.25rem;
+      width: 0%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--andean-gold), var(--andean-green));
+      transition: width 0.2s ease-out;
+    }
+
+    nav a:hover::after {
+      width: 100%;
     }
 
     /* Mobile menu button */
     .menu-toggle {
       display: none;
       background: none;
-      border: none;
+      border: 1px solid rgba(148,163,184,0.5);
+      border-radius: 999px;
+      padding: 0.3rem 0.5rem;
       cursor: pointer;
     }
 
     .menu-toggle span {
       display: block;
-      width: 24px;
+      width: 22px;
       height: 2px;
-      background: #475569;
-      margin: 5px 0;
+      background: #e5e7eb;
+      margin: 4px 0;
       transition: 0.3s;
     }
 
     /* HERO */
+    .hero-wrapper {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top left, rgba(244,162,97,0.32), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(27,153,139,0.28), transparent 55%),
+        linear-gradient(135deg, #0b1f32, #264653);
+      color: #f9fafb;
+    }
+
     .hero {
-      padding: 7rem 0 4rem;
-      background: radial-gradient(circle at top left, rgba(244,162,97,0.3), transparent 55%),
-                  radial-gradient(circle at bottom right, rgba(27,153,139,0.25), transparent 60%),
-                  #f9fafb;
-      text-align: center;
+      padding: 7rem 0 4.2rem;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.2rem;
+      align-items: center;
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      background: rgba(27,153,139,0.08);
-      color: var(--andean-green);
-      padding: 0.35rem 0.8rem;
+      gap: 0.6rem;
+      background: rgba(15,118,110,0.16);
+      color: #a5f3fc;
+      padding: 0.35rem 0.85rem;
       border-radius: 999px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 600;
       margin-bottom: 1.2rem;
+      border: 1px solid rgba(45,212,191,0.25);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 0 6px rgba(34,197,94,0.35);
     }
 
     .hero h1 {
-      font-size: 2.3rem;
-      margin-bottom: 0.8rem;
-      color: #0f172a;
+      font-size: 2.4rem;
+      margin-bottom: 0.7rem;
+      color: #f9fafb;
+      letter-spacing: 0.03em;
     }
 
     .hero h1 span {
-      background: linear-gradient(90deg, var(--andean-green), #059669);
+      background: linear-gradient(90deg, var(--andean-gold), #fca5a5, var(--andean-green));
       -webkit-background-clip: text;
       color: transparent;
     }
 
-    .hero p {
-      max-width: 650px;
-      margin: 0 auto 1.8rem;
-      font-size: 1.02rem;
-      color: #4b5563;
+    .hero-sub {
+      max-width: 540px;
+      font-size: 0.98rem;
+      color: #e5e7eb;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-sub strong {
+      color: #fef3c7;
     }
 
     .hero-buttons {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
       gap: 0.8rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.4rem;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 0.8rem 1.4rem;
-      border-radius: 0.7rem;
-      font-weight: 700;
-      font-size: 0.95rem;
+      padding: 0.8rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
       cursor: pointer;
       border: 1px solid transparent;
       transition: 0.2s;
+      gap: 0.35rem;
+      white-space: nowrap;
     }
 
     .btn-primary {
-      background: var(--andean-green);
-      color: #fff;
-      box-shadow: 0 10px 25px rgba(27,153,139,0.35);
+      background: linear-gradient(90deg, var(--andean-green), #059669);
+      color: #f9fafb;
+      box-shadow: 0 14px 28px rgba(15,118,110,0.5);
     }
 
     .btn-primary:hover {
-      background: #128273;
-      transform: translateY(-1px);
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 18px 38px rgba(15,118,110,0.65);
     }
 
     .btn-secondary {
-      background: #ffffff;
-      color: #475569;
-      border-color: #e2e8f0;
+      background: rgba(15,23,42,0.75);
+      color: #e5e7eb;
+      border-color: rgba(148,163,184,0.6);
     }
 
     .btn-secondary:hover {
+      background: rgba(15,23,42,1);
       border-color: var(--andean-gold);
       color: var(--andean-gold);
     }
 
-    .hero-quote {
-      margin-top: 1rem;
-      font-style: italic;
-      color: #6b7280;
-      font-weight: 500;
+    .btn svg {
+      width: 16px;
+      height: 16px;
     }
 
-    /* SECTIONS */
+    .hero-quote {
+      margin-top: 0.6rem;
+      font-style: italic;
+      color: #cbd5f5;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    /* Hero right graphic */
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(244,162,97,0.22), rgba(27,153,139,0.4));
+      border-radius: 1.6rem;
+      padding: 1.3rem 1.4rem;
+      box-shadow: 0 16px 40px rgba(15,23,42,0.65);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.4);
+      font-size: 0.75rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-chip span {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: #22c55e;
+    }
+
+    .hero-metric {
+      background: rgba(15,23,42,0.35);
+      border-radius: 0.9rem;
+      padding: 0.8rem 0.9rem;
+      margin-top: 0.7rem;
+      font-size: 0.82rem;
+    }
+
+    .hero-metric strong {
+      color: #bbf7d0;
+    }
+
+    .hero-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
+    }
+
+    .hero-pill {
+      font-size: 0.75rem;
+      padding: 0.35rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.45);
+      border: 1px solid rgba(229, 231, 235, 0.3);
+    }
+
+    .hero-floating-tag {
+      position: absolute;
+      bottom: 0.9rem;
+      right: 1rem;
+      font-size: 0.78rem;
+      background: rgba(15,23,42,0.75);
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.6);
+    }
+
+    /* generic sections */
     section {
-      padding: 3.5rem 0;
+      padding: 3.7rem 0;
+      position: relative;
+      z-index: 1;
     }
 
     section h2 {
       font-size: 1.9rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0.6rem;
       text-align: center;
-      color: #0f172a;
+      color: var(--andean-dark);
     }
 
     section p.section-intro {
       text-align: center;
-      max-width: 640px;
+      max-width: 650px;
       margin: 0 auto 2rem;
       color: #4b5563;
+      font-size: 0.96rem;
+    }
+
+    /* Section dividers */
+    .section-divider {
+      height: 70px;
+      background: linear-gradient(180deg, #0b1f32, #f3f4f6);
+      clip-path: polygon(0 0,100% 40%,100% 100%,0 100%);
+    }
+
+    .section-divider-top {
+      height: 70px;
+      background: linear-gradient(180deg, #f3f4f6, white);
+      clip-path: polygon(0 0,100% 0,100% 60%,0 100%);
     }
 
     /* SOBRE NOSOTROS */
+    #nosotros {
+      background: white;
+    }
+
     .about-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
@@ -228,50 +384,70 @@
     .about-text p {
       margin-bottom: 0.8rem;
       color: #4b5563;
-      font-size: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .about-text p.highlight {
+      font-weight: 500;
+      color: var(--andean-deep);
     }
 
     .about-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+      gap: 0.9rem;
       margin-top: 1rem;
     }
 
     .about-card {
       background: #f8fafc;
-      border-left: 4px solid var(--andean-green);
       border-radius: 0.9rem;
       padding: 0.9rem 1rem;
-      box-shadow: 0 1px 3px rgba(15,23,42,0.08);
+      box-shadow: 0 1px 4px rgba(15,23,42,0.06);
+      border: 1px solid #e2e8f0;
+      position: relative;
+      overflow: hidden;
     }
 
-    .about-card:nth-child(2) {
-      border-left-color: var(--andean-gold);
+    .about-card::before {
+      content: "";
+      position: absolute;
+      left: -24px;
+      top: -24px;
+      width: 60px;
+      height: 60px;
+      border-radius: 999px;
+      background: var(--accent-soft);
     }
 
     .about-card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.2rem;
-      color: #111827;
+      font-size: 0.9rem;
+      margin-bottom: 0.1rem;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
     }
 
     .about-card .name {
       font-weight: 700;
       color: var(--andean-green);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem;
     }
 
     .about-card p {
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: #6b7280;
+      position: relative;
+      z-index: 1;
     }
 
     .about-image {
       border-radius: 1.4rem;
       overflow: hidden;
-      box-shadow: 0 18px 45px rgba(15,23,42,0.25);
-      background: linear-gradient(135deg, rgba(27,153,139,0.2), rgba(244,162,97,0.35));
+      position: relative;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+      background: linear-gradient(135deg, rgba(27,153,139,0.7), rgba(244,162,97,0.7));
       height: 260px;
       display: flex;
       align-items: flex-end;
@@ -279,12 +455,35 @@
       color: white;
     }
 
-    .about-image p {
+    .about-image::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(248,250,252,0.4), transparent 55%);
+      opacity: 0.9;
+    }
+
+    .about-image-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-image-title {
       font-size: 1.1rem;
       font-weight: 700;
     }
 
+    .about-image-sub {
+      font-size: 0.88rem;
+      opacity: 0.9;
+      margin-top: 0.25rem;
+    }
+
     /* PROPUESTA (SERVICIOS) */
+    #propuesta {
+      background: var(--bg-light);
+    }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -294,29 +493,53 @@
     .service-card {
       background: #ffffff;
       border-radius: 1rem;
-      padding: 1.2rem;
+      padding: 1.15rem;
       border: 1px solid #e5e7eb;
-      box-shadow: 0 1px 3px rgba(15,23,42,0.08);
-      transition: box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 1px 4px rgba(15,23,42,0.08);
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
     }
 
-    .service-card:hover {
-      box-shadow: 0 10px 26px rgba(15,23,42,0.15);
-      transform: translateY(-2px);
+    .service-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.6rem;
+      background: linear-gradient(135deg, rgba(27,153,139,0.15), rgba(244,162,97,0.2));
+    }
+
+    .service-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--andean-deep);
     }
 
     .service-card h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
+      font-size: 0.98rem;
+      margin-bottom: 0.3rem;
       color: #111827;
     }
 
     .service-card p {
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       color: #6b7280;
     }
 
+    .service-card:hover {
+      box-shadow: 0 12px 28px rgba(15,23,42,0.16);
+      transform: translateY(-2px);
+      border-color: var(--andean-green);
+    }
+
     /* FASES */
+    #fases {
+      background: white;
+    }
+
     .phases-grid {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -332,36 +555,57 @@
       overflow: hidden;
     }
 
-    .phase-badge {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #6b7280;
-      margin-bottom: 0.2rem;
-    }
-
     .phase-number {
       position: absolute;
-      top: 0.5rem;
+      top: 0.4rem;
       right: 0.6rem;
-      font-size: 2.8rem;
+      font-size: 2.6rem;
       font-weight: 800;
-      color: rgba(148,163,184,0.25);
+      color: rgba(148,163,184,0.28);
+    }
+
+    .phase-badge {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: #6b7280;
+      margin-bottom: 0.1rem;
     }
 
     .phase-title {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 700;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
       color: #111827;
     }
 
+    .phase-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: rgba(27,153,139,0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .phase-icon svg {
+      width: 18px;
+      height: 18px;
+      stroke: var(--andean-deep);
+    }
+
     .phase-card p {
-      font-size: 0.9rem;
+      font-size: 0.86rem;
       color: #6b7280;
     }
 
     /* ALIADOS */
+    #aliados {
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+    }
+
     .ally-boxes {
       display: grid;
       grid-template-columns: repeat(4, minmax(0,1fr));
@@ -372,43 +616,68 @@
     .ally {
       border-radius: 0.9rem;
       border: 1px dashed #cbd5e1;
-      padding: 0.8rem;
-      background: #f8fafc;
-      font-size: 0.9rem;
+      padding: 0.9rem;
+      background: #ffffff;
+      font-size: 0.86rem;
       color: #4b5563;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ally::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(244,162,97,0.16), transparent 55%);
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .ally span {
+      position: relative;
+      z-index: 1;
     }
 
     /* POR QUÉ NOSOTROS */
     .why-list {
-      max-width: 700px;
+      max-width: 750px;
       margin: 0.5rem auto 0;
       list-style: none;
     }
 
     .why-list li {
       margin-bottom: 0.6rem;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
       color: #4b5563;
+      padding-left: 1.2rem;
+      position: relative;
     }
 
     .why-list li::before {
-      content: "• ";
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 0.1rem;
       color: var(--andean-green);
-      font-weight: 900;
+      font-size: 0.7rem;
     }
 
     /* CONTACTO */
+    #contacto {
+      background: #ffffff;
+    }
+
     .contact-grid {
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 2rem;
       align-items: flex-start;
     }
 
     form {
       background: #ffffff;
-      border-radius: 1rem;
+      border-radius: 1.1rem;
       padding: 1.5rem;
       box-shadow: 0 10px 30px rgba(15,23,42,0.12);
       border: 1px solid #e5e7eb;
@@ -416,15 +685,14 @@
 
     form label {
       display: block;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       color: #4b5563;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
     form input,
-    form textarea,
-    form select {
+    form textarea {
       width: 100%;
       padding: 0.6rem 0.7rem;
       border-radius: 0.6rem;
@@ -432,6 +700,7 @@
       font-size: 0.9rem;
       margin-bottom: 0.8rem;
       font-family: inherit;
+      background: #f9fafb;
     }
 
     form input:focus,
@@ -439,6 +708,7 @@
       outline: none;
       border-color: var(--andean-green);
       box-shadow: 0 0 0 1px rgba(27,153,139,0.3);
+      background: #ffffff;
     }
 
     form textarea {
@@ -449,7 +719,7 @@
     .success-message {
       display: none;
       margin-top: 0.5rem;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: #047857;
       font-weight: 600;
     }
@@ -457,27 +727,37 @@
     .contact-info p {
       margin-bottom: 0.6rem;
       color: #4b5563;
-      font-size: 0.95rem;
+      font-size: 0.93rem;
     }
 
     .contact-highlight {
       margin-top: 0.8rem;
-      padding: 0.8rem;
-      border-radius: 0.8rem;
+      padding: 0.85rem;
+      border-radius: 0.9rem;
       background: rgba(27,153,139,0.06);
       color: #065f46;
       font-size: 0.9rem;
+      border: 1px solid rgba(45,212,191,0.4);
     }
 
     .whatsapp-btn {
-      display: inline-block;
-      margin-top: 0.8rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 0.9rem;
       padding: 0.6rem 1.1rem;
       border-radius: 999px;
       background: #22c55e;
       color: #fff;
       font-size: 0.9rem;
       font-weight: 600;
+    }
+
+    .whatsapp-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: none;
+      stroke: #ffffff;
     }
 
     .whatsapp-btn:hover {
@@ -492,18 +772,23 @@
       color: #6b7280;
       border-top: 1px solid #e5e7eb;
       margin-top: 1rem;
+      background: #f9fafb;
     }
 
     /* RESPONSIVE */
-    @media (max-width: 900px) {
+    @media (max-width: 980px) {
+      .hero-grid,
       .about-grid,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .about-image {
-        height: 220px;
-        margin-top: 1rem;
+      .hero {
+        padding-top: 6.5rem;
+      }
+
+      .hero-card {
+        margin-top: 1.5rem;
       }
 
       .services-grid,
@@ -513,7 +798,7 @@
       }
     }
 
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
       nav {
         display: none;
       }
@@ -528,8 +813,8 @@
         top: 54px;
         left: 0;
         right: 0;
-        background: #ffffff;
-        border-top: 1px solid #e5e7eb;
+        background: #0b1220;
+        border-top: 1px solid rgba(148,163,184,0.4);
       }
 
       nav.mobile-open ul {
@@ -538,18 +823,24 @@
         gap: 0.8rem;
       }
 
-      .hero {
-        padding-top: 6.5rem;
+      .hero-grid {
+        gap: 1.8rem;
       }
 
-      .hero h1 {
-        font-size: 1.9rem;
+      .about-image {
+        height: 230px;
       }
+    }
 
+    @media (max-width: 640px) {
       .services-grid,
       .phases-grid,
       .ally-boxes {
         grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
       }
     }
   </style>
@@ -559,7 +850,10 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <a href="#inicio" class="logo">Andean <span>Export</span></a>
+      <div class="brand-block">
+        <a href="#inicio" class="logo">Andean <span>Export</span></a>
+        <div class="tagline">De los Andes a Uruguay, con propósito</div>
+      </div>
 
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
         <span></span><span></span><span></span>
@@ -578,244 +872,437 @@
     </div>
   </header>
 
-  <main>
-    <!-- HERO -->
+  <!-- HERO WRAPPER -->
+  <div class="hero-wrapper">
     <section id="inicio" class="hero">
       <div class="container">
-        <div class="hero-badge">
-          31ª Rueda Internacional de Negocios – ICAM
-        </div>
-        <h1>
-          Tu producto merece <br />
-          <span>cruzar fronteras</span>
-        </h1>
-        <p>
-          En <strong>Andean Export</strong> conectamos marcas bolivianas con clientes en Uruguay, combinando estrategia, logística y corazón para que cada envío tenga sentido.
-        </p>
+        <div class="hero-grid">
+          <!-- LEFT -->
+          <div>
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              31ª Rueda Internacional de Negocios – ICAM · Cochabamba
+            </div>
+            <h1>
+              Tu producto merece<br />
+              <span>cruzar fronteras con sentido</span>
+            </h1>
+            <p class="hero-sub">
+              En <strong>Andean Export</strong> ayudamos a que productos bolivianos con alma propia
+              lleguen a Uruguay. No solo pensamos en pallets y tarifas: pensamos en las familias, en
+              la historia detrás de cada tableta, cada botella y cada grano andino.
+            </p>
 
-        <div class="hero-buttons">
-          <a href="#contacto" class="btn btn-primary">
-            Quiero llevar mi marca a Uruguay
+            <div class="hero-buttons">
+              <a href="#contacto" class="btn btn-primary">
+                <span>Quiero llevar mi marca a Uruguay</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="m12 5 7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#fases" class="btn btn-secondary">
+                <span>Conoce nuestro plan por fases</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="7 18 13 12 7 6"></polyline>
+                  <polyline points="11 18 17 12 11 6"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <p class="hero-quote">
+              “No solo movemos cajas, movemos historias, personas y futuros compartidos.”
+            </p>
+          </div>
+
+          <!-- RIGHT "GRAPHIC" -->
+          <div class="hero-card">
+            <div class="hero-chip">
+              <span></span>
+              Andean Export · Operación binacional
+            </div>
+
+            <div class="hero-metric">
+              <strong>Bolivia → Uruguay</strong><br />
+              Chocolates, snacks, vinos, granos andinos y alimentos naturales que buscan un mercado
+              serio, ordenado y con poder de compra.
+            </div>
+
+            <div class="hero-pill-row">
+              <div class="hero-pill">E-commerce Uruguay</div>
+              <div class="hero-pill">Logística & última milla</div>
+              <div class="hero-pill">Farmacias & retail</div>
+              <div class="hero-pill">Tiendas naturales</div>
+            </div>
+
+            <div class="hero-floating-tag">
+              Binacional: Marco A. Daza (Bolivia) · Nicolás Lorenzo (Uruguay)
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <!-- SOBRE NOSOTROS -->
+  <section id="nosotros">
+    <div class="container">
+      <h2>Un puente real entre Bolivia y Uruguay</h2>
+      <p class="section-intro">
+        Andean Export nace de caminar ferias, hablar con productores, escuchar acentos uruguayos
+        en Montevideo y sentir el pulso real del mercado. No trabajamos desde un escritorio:
+        trabajamos desde la experiencia y el corazón de dos países.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="highlight">
+            Somos un puente binacional para productores que quieren ir más allá de vender en su ciudad
+            o su país. Acompañamos a quienes sienten que su producto ya maduró lo suficiente como para
+            cruzar frontera, pero necesitan un plan, una mano y un aliado que entienda el camino.
+          </p>
+          <p>
+            Creemos que detrás de cada producto hay familias, trabajo y sueños. Nuestro rol es que ese
+            esfuerzo llegue a un mercado ordenado, exigente y lleno de oportunidades, sin perder la
+            esencia de donde nació.
+          </p>
+
+          <div class="about-cards">
+            <div class="about-card">
+              <h3>Bolivia</h3>
+              <p class="name">Marco A. Daza</p>
+              <p>
+                Acompaña a los productores, entiende sus márgenes, su esfuerzo y su historia.
+                Une la mirada técnica de la inteligencia de negocios con el respeto profundo por
+                el trabajo de las familias bolivianas.
+              </p>
+            </div>
+            <div class="about-card">
+              <h3>Uruguay</h3>
+              <p class="name">Nicolás Lorenzo</p>
+              <p>
+                Ayuda a aterrizar esa historia en un mercado exigente. Conoce la dinámica uruguaya,
+                las reglas del juego y las oportunidades reales para que cada producto encuentre
+                el canal adecuado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-image">
+          <div class="about-image-content">
+            <div class="about-image-title">
+              Dos países, una cordillera, un mismo puente.
+            </div>
+            <div class="about-image-sub">
+              Experiencia binacional para decisiones más inteligentes y humanas.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider-top"></div>
+
+  <!-- PROPUESTA -->
+  <section id="propuesta">
+    <div class="container">
+      <h2>¿Qué hacemos por tu marca?</h2>
+      <p class="section-intro">
+        Transformamos la complejidad de exportar en un proceso ordenado, medible y escalable.
+        Tú te ocupas del producto, nosotros del puente.
+      </p>
+
+      <div class="services-grid">
+        <!-- 1 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.3-4.3"></path>
+            </svg>
+          </div>
+          <h3>Leemos el mercado por ti</h3>
+          <p>
+            Analizamos precios, competencia, categorías y canales en Uruguay para que tus decisiones
+            no sean un salto al vacío, sino un paso pensado con datos y contexto real.
+          </p>
+        </div>
+
+        <!-- 2 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h7v7H3z"></path>
+              <path d="M14 3h7v7h-7z"></path>
+              <path d="M14 14h7v7h-7z"></path>
+              <path d="M3 14h7v7H3z"></path>
+            </svg>
+          </div>
+          <h3>Diseñamos tu entrada</h3>
+          <p>
+            No todos los productos entran por la misma puerta. Definimos contigo si empezar por
+            e-commerce, farmacias, tiendas naturales o una mezcla inteligente, cuidando tus riesgos
+            y tu inversión.
+          </p>
+        </div>
+
+        <!-- 3 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M8 21h4"></path>
+              <path d="M10 21V9"></path>
+              <path d="m5 9 5-7 5 7"></path>
+              <path d="M4 14h4"></path>
+              <path d="M16 14h4"></path>
+              <path d="M4 18h2"></path>
+              <path d="M18 18h2"></path>
+            </svg>
+          </div>
+          <h3>Logística experta</h3>
+          <p>
+            Trabajamos con operadores especializados para que almacenamiento, distribución y última
+            milla sean parte de la solución, no del problema. Tú te concentras en tu producto,
+            nosotros en que llegue.
+          </p>
+        </div>
+
+        <!-- 4 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20l9-16H3z"></path>
+            </svg>
+          </div>
+          <h3>Acompañamos tu marca</h3>
+          <p>
+            No creemos en envíos de una sola vez. Creemos en construir presencia, confianza y
+            relaciones de largo plazo entre tu marca y el mercado uruguayo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FASES -->
+  <section id="fases">
+    <div class="container">
+      <h2>Un plan claro para crecer sin perder el control</h2>
+      <p class="section-intro">
+        No todos los productos necesitan el mismo camino. Por eso trabajamos por fases, cuidando
+        tus riesgos, tu inversión y la madurez de tu marca.
+      </p>
+
+      <div class="phases-grid">
+        <!-- F1 -->
+        <div class="phase-card">
+          <div class="phase-number">01</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 3h18l-2 13H5L3 3z"></path>
+              <circle cx="9" cy="19" r="1"></circle>
+              <circle cx="17" cy="19" r="1"></circle>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 1</div>
+          <div class="phase-title">E-commerce y última milla</div>
+          <p>
+            Probamos el mercado con inteligencia: ventas online, pagos simples y entregas confiables
+            con operadores logísticos. Es la forma más cuidada de escuchar al consumidor uruguayo sin
+            arriesgarlo todo.
+          </p>
+        </div>
+
+        <!-- F2 -->
+        <div class="phase-card">
+          <div class="phase-number">02</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="14" rx="2"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 2</div>
+          <div class="phase-title">Farmacias y cadenas</div>
+          <p>
+            Cuando el producto encaja, buscamos cadenas como San Roque y otras redes donde la
+            confianza, la trazabilidad y la seriedad son clave. Aquí tu marca gana prestigio
+            y visibilidad.
+          </p>
+        </div>
+
+        <!-- F3 -->
+        <div class="phase-card">
+          <div class="phase-number">03</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 22h16"></path>
+              <path d="M5 22v-7l3-3 4 4 3-3 4 4v5"></path>
+              <circle cx="7" cy="5" r="2"></circle>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 3</div>
+          <div class="phase-title">Tiendas naturales & healthy</div>
+          <p>
+            El lugar ideal para productos con identidad, valor nutricional y raíces andinas. En estas
+            góndolas la historia importa tanto como el empaque: es donde tu relato y tu calidad se
+            encuentran con el cliente final.
+          </p>
+        </div>
+
+        <!-- F4 -->
+        <div class="phase-card">
+          <div class="phase-number">04</div>
+          <div class="phase-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 4h18v4H3z"></path>
+              <path d="M5 8v12"></path>
+              <path d="M10 8v12"></path>
+              <path d="M14 8v12"></path>
+              <path d="M19 8v12"></path>
+            </svg>
+          </div>
+          <div class="phase-badge">Fase 4</div>
+          <div class="phase-title">Supermercados</div>
+          <p>
+            No corremos por estar “en todos lados”. Llegamos a supermercados cuando la marca ya tiene
+            respaldo: datos, rotación, consumidores fieles y una historia que justifica estar en
+            la gran liga.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ALIADOS -->
+  <section id="aliados">
+    <div class="container">
+      <h2>No trabajamos solos, trabajamos en red</h2>
+      <p class="section-intro">
+        Para que tu producto llegue bien, a tiempo y en buenas manos, nos apoyamos en aliados que ya
+        conocen el mercado uruguayo y sus reglas.
+      </p>
+
+      <div class="ally-boxes">
+        <div class="ally">
+          <span>Operadores logísticos (almacenamiento y última milla en Uruguay)</span>
+        </div>
+        <div class="ally">
+          <span>Cadenas de farmacias y salud</span>
+        </div>
+        <div class="ally">
+          <span>Tiendas naturales, healthy y gourmet</span>
+        </div>
+        <div class="ally">
+          <span>Plataformas de pago, e-commerce y marketplaces</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ NOSOTROS -->
+  <section>
+    <div class="container">
+      <h2>¿Por qué trabajar con Andean Export?</h2>
+      <ul class="why-list">
+        <li>
+          Porque entendemos tanto el lado de la chacra, la planta y el taller, como el lado del Excel,
+          los márgenes y las cadenas de retail.
+        </li>
+        <li>
+          Porque ya hicimos el viaje, hablamos con empresas en Uruguay y sabemos qué funciona y qué no
+          para un producto boliviano.
+        </li>
+        <li>
+          Porque no te ofrecemos “exportar por exportar”, sino un camino con etapas, aprendizajes
+          y ajustes.
+        </li>
+        <li>
+          Porque creemos que cuando un producto boliviano llega bien a Uruguay, gana el productor,
+          gana el cliente y ganan los dos países.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Hablemos de tu producto</h2>
+      <p class="section-intro">
+        Si sentís que tu producto ya está listo para salir de Bolivia, pero todavía no sabes por dónde
+        empezar, este es el momento de conversar. A veces una buena llamada cambia el destino de una marca.
+      </p>
+
+      <div class="contact-grid">
+        <form id="contactForm">
+          <label for="empresa">Nombre de la empresa</label>
+          <input type="text" id="empresa" name="empresa" required />
+
+          <label for="contactoNombre">Persona de contacto</label>
+          <input type="text" id="contactoNombre" name="contactoNombre" required />
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required />
+
+          <label for="pais">País</label>
+          <input type="text" id="pais" name="pais" required />
+
+          <label for="producto">Tipo de producto</label>
+          <input type="text" id="producto" name="producto"
+                 placeholder="Chocolates, snacks, vinos, granos andinos, etc." required />
+
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.3rem;">
+            Enviar mensaje
+          </button>
+
+          <div id="successMessage" class="success-message">
+            Gracias, hemos recibido tu mensaje. Muy pronto nos pondremos en contacto contigo.
+          </div>
+        </form>
+
+        <div class="contact-info">
+          <p><strong>Contacto en Bolivia:</strong> Marco A. Daza</p>
+          <p><strong>Contacto en Uruguay:</strong> Nicolás Lorenzo</p>
+          <p>
+            Trabajamos con productores que quieren crecer con seriedad, datos claros y una estrategia
+            paso a paso. No buscamos volumen vacío, buscamos relaciones que tengan sentido.
+          </p>
+
+          <div class="contact-highlight">
+            Muchos productores empezaron igual: con una idea, un buen producto y mil dudas.
+            El primer paso es simple: hablemos y veamos si este puente tiene sentido para tu marca.
+          </div>
+
+          <a href="https://wa.me/59100000000" target="_blank" class="whatsapp-btn">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 21l1.2-4.3A8 8 0 1112 20a8.3 8.3 0 01-4-1"></path>
+              <path d="M16 17.5c-.6.3-1.3.5-2 .5a5 5 0 01-5-5"></path>
+              <path d="M9 11l1.5-.5L11 12l1.5-.5L13 13"></path>
+            </svg>
+            Escribir por WhatsApp
           </a>
-          <a href="#fases" class="btn btn-secondary">
-            Conoce nuestro plan por fases
-          </a>
-        </div>
-
-        <p class="hero-quote">“No solo movemos cajas, movemos historias.”</p>
-      </div>
-    </section>
-
-    <!-- SOBRE NOSOTROS -->
-    <section id="nosotros">
-      <div class="container">
-        <h2>Un puente real entre Bolivia y Uruguay</h2>
-        <p class="section-intro">
-          Andean Export nace de la experiencia real de pisar Uruguay, hablar con empresas, entender precios, impuestos, hábitos y canales. No trabajamos desde la teoría: trabajamos desde el terreno.
-        </p>
-
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              Somos un puente binacional que acompaña a productores bolivianos que quieren dar el salto a Uruguay, sin perder el control de su marca ni sus márgenes.
-            </p>
-            <p>
-              Creemos que detrás de cada producto hay familias, trabajo y sueños. Nuestro rol es que ese esfuerzo llegue a un mercado ordenado, exigente y lleno de oportunidades.
-            </p>
-
-            <div class="about-cards">
-              <div class="about-card">
-                <h3>Bolivia</h3>
-                <p class="name">Marco A. Daza</p>
-                <p>
-                  Acompaña a los productores, entiende sus márgenes, su esfuerzo y su historia. Experto en inteligencia de negocios, retail y proyectos binacionales.
-                </p>
-              </div>
-              <div class="about-card">
-                <h3>Uruguay</h3>
-                <p class="name">Nicolás Lorenzo</p>
-                <p>
-                  Ayuda a aterrizar esa historia en un mercado exigente. Conecta redes, oportunidades y contexto local para que la entrada tenga sentido.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-image">
-            <p>Experiencia binacional para decisiones más inteligentes.</p>
-          </div>
         </div>
       </div>
-    </section>
-
-    <!-- PROPUESTA -->
-    <section id="propuesta" style="background: var(--bg-light);">
-      <div class="container">
-        <h2>¿Qué hacemos por tu marca?</h2>
-        <p class="section-intro">
-          Transformamos la complejidad de exportar en un proceso ordenado, medible y escalable.
-        </p>
-
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Leemos el mercado por ti</h3>
-            <p>
-              Analizamos precios, competencia, categorías y canales en Uruguay para que tomes decisiones con datos, no con suposiciones.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Diseñamos tu entrada</h3>
-            <p>
-              Definimos contigo cómo entrar: e-commerce, farmacias, tiendas naturales o una combinación por etapas, según tu producto y tu realidad.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Logística experta</h3>
-            <p>
-              Trabajamos con operadores especializados para que el almacenamiento, la distribución y la última milla no sean un problema.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Acompañamos tu marca</h3>
-            <p>
-              No creemos en un solo envío. Creemos en relaciones a largo plazo y presencia sostenida en el tiempo.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FASES -->
-    <section id="fases">
-      <div class="container">
-        <h2>Un plan claro para crecer sin perder el control</h2>
-        <p class="section-intro">
-          No todos los productos necesitan el mismo camino. Por eso trabajamos por fases, cuidando tus riesgos y tu inversión.
-        </p>
-
-        <div class="phases-grid">
-          <div class="phase-card">
-            <div class="phase-number">01</div>
-            <div class="phase-badge">Fase 1</div>
-            <div class="phase-title">E-commerce y última milla</div>
-            <p>
-              Probamos el mercado con inteligencia: ventas online, pagos fáciles y entregas confiables con operadores logísticos especializados. Menos riesgo, más aprendizaje.
-            </p>
-          </div>
-          <div class="phase-card">
-            <div class="phase-number">02</div>
-            <div class="phase-badge">Fase 2</div>
-            <div class="phase-title">Farmacias y cadenas</div>
-            <p>
-              Cuando el producto encaja, abrimos camino en cadenas como San Roque, donde la confianza, la seriedad y la trazabilidad son clave.
-            </p>
-          </div>
-          <div class="phase-card">
-            <div class="phase-number">03</div>
-            <div class="phase-badge">Fase 3</div>
-            <div class="phase-title">Tiendas naturales & healthy</div>
-            <p>
-              Ideal para productos con identidad, valor nutricional y origen andino. Tu historia suma tanto como tu sabor.
-            </p>
-          </div>
-          <div class="phase-card">
-            <div class="phase-number">04</div>
-            <div class="phase-badge">Fase 4</div>
-            <div class="phase-title">Supermercados</div>
-            <p>
-              No corremos: planificamos. Llegamos a supermercados cuando la marca ya tiene demanda, datos y una historia que la respalda.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ALIADOS -->
-    <section id="aliados" style="background: var(--bg-light);">
-      <div class="container">
-        <h2>No trabajamos solos, trabajamos en red</h2>
-        <p class="section-intro">
-          Para que tu producto llegue bien, a tiempo y en buenas manos, nos apoyamos en aliados que ya conocen el mercado uruguayo.
-        </p>
-
-        <div class="ally-boxes">
-          <div class="ally">Operadores logísticos (almacenamiento y última milla)</div>
-          <div class="ally">Cadenas de farmacias</div>
-          <div class="ally">Tiendas naturales, healthy y gourmet</div>
-          <div class="ally">Plataformas de pago y e-commerce</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- POR QUÉ NOSOTROS -->
-    <section>
-      <div class="container">
-        <h2>¿Por qué trabajar con Andean Export?</h2>
-        <ul class="why-list">
-          <li>Porque hablamos el idioma de los productores bolivianos y el de los negocios uruguayos.</li>
-          <li>Porque ya hicimos el camino de ir, mirar, preguntar, calcular… y ahora queremos que tú aproveches ese aprendizaje.</li>
-          <li>Porque no prometemos magia: prometemos trabajo serio, datos claros y un plan realista.</li>
-          <li>Porque creemos que cada producto boliviano tiene una historia que merece ser contada más allá de nuestras fronteras.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-      <div class="container">
-        <h2>Hablemos de tu producto</h2>
-        <p class="section-intro">
-          Si sientes que tu producto ya está listo para dar el salto a Uruguay, conversemos. La próxima oportunidad podría empezar hoy.
-        </p>
-
-        <div class="contact-grid">
-          <form id="contactForm">
-            <label for="empresa">Nombre de la empresa</label>
-            <input type="text" id="empresa" name="empresa" required />
-
-            <label for="contactoNombre">Persona de contacto</label>
-            <input type="text" id="contactoNombre" name="contactoNombre" required />
-
-            <label for="correo">Correo electrónico</label>
-            <input type="email" id="correo" name="correo" required />
-
-            <label for="pais">País</label>
-            <input type="text" id="pais" name="pais" required />
-
-            <label for="producto">Tipo de producto</label>
-            <input type="text" id="producto" name="producto" placeholder="Chocolates, snacks, vinos, granos andinos, etc." required />
-
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-
-            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.3rem;">
-              Enviar mensaje
-            </button>
-
-            <div id="successMessage" class="success-message">
-              Gracias, hemos recibido tu mensaje. Muy pronto nos pondremos en contacto contigo.
-            </div>
-          </form>
-
-          <div class="contact-info">
-            <p><strong>Contacto en Bolivia:</strong> Marco A. Daza</p>
-            <p><strong>Contacto en Uruguay:</strong> Nicolás Lorenzo</p>
-            <p>
-              Trabajamos con productores que quieren crecer con seriedad, datos claros y una estrategia paso a paso.
-            </p>
-
-            <div class="contact-highlight">
-              También puedes escribirnos por WhatsApp si prefieres algo más directo.
-            </div>
-
-            <a href="https://wa.me/59100000000" target="_blank" class="whatsapp-btn">
-              Escribir por WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer>
     © 2025 Andean Export. Todos los derechos reservados.  
@@ -831,7 +1318,6 @@
       mainNav.classList.toggle('mobile-open');
     });
 
-    // Cerrar menú al hacer clic en un enlace (en móvil)
     mainNav.addEventListener('click', (e) => {
       if (e.target.tagName === 'A' && mainNav.classList.contains('mobile-open')) {
         mainNav.classList.remove('mobile-open');
@@ -845,7 +1331,6 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Validación simple
       const requiredFields = ['empresa', 'contactoNombre', 'correo', 'pais', 'producto', 'mensaje'];
       let valid = true;
 
@@ -861,7 +1346,6 @@
 
       if (!valid) return;
 
-      // Simular envío
       form.reset();
       successMessage.style.display = 'block';
 
