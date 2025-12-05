@@ -1369,6 +1369,57 @@
       </form>
     </div>
   </section>
+  <script>
+  // Menú móvil u otros scripts tuyos pueden seguir arriba…
+
+  const form = document.getElementById('contactForm');
+  const successMessage = document.getElementById('successMessage');
+
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault(); // ahora sí, lo frenamos a propósito
+
+      // Validación simple
+      const requiredFields = ['empresa', 'contactoNombre', 'correo', 'pais', 'producto', 'mensaje'];
+      let valid = true;
+
+      requiredFields.forEach((id) => {
+        const field = document.getElementById(id);
+        if (!field.value.trim()) {
+          valid = false;
+          field.style.borderColor = 'red';
+        } else {
+          field.style.borderColor = '#d1d5db';
+        }
+      });
+
+      if (!valid) return;
+
+      try {
+        const formData = new FormData(form);
+        const actionUrl = form.getAttribute('action');
+
+        await fetch(actionUrl, {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors' // no leemos la respuesta, solo mandamos los datos
+        });
+
+        form.reset();
+
+        if (successMessage) {
+          successMessage.classList.remove('hidden');
+          setTimeout(() => {
+            successMessage.classList.add('hidden');
+          }, 5000);
+        }
+      } catch (error) {
+        console.error('Error al enviar el formulario:', error);
+        alert('Ocurrió un problema al enviar el formulario. Intenta nuevamente.');
+      }
+    });
+  }
+</script>
 
 
         <div class="contact-info">
