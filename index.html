@@ -1256,45 +1256,119 @@
   </section>
 
   <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="container">
-      <h2>Hablemos de tu producto</h2>
-      <p class="section-intro">
-        Si sentís que tu producto ya está listo para salir de Bolivia, pero todavía no sabes por dónde
-        empezar, este es el momento de conversar. A veces una buena llamada cambia el destino de una marca.
-      </p>
+  <section id="contacto" class="py-20 bg-slate-50">
+  <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 text-center">
+      Conversemos sobre tu producto
+    </h2>
+    <p class="text-slate-600 mb-10 text-center max-w-xl mx-auto">
+      Cuéntanos brevemente sobre tu marca y el tipo de producto que quieres llevar a Uruguay.
+      Te responderemos personalmente desde Andean Export.
+    </p>
 
-      <div class="contact-grid">
-        <form id="contactForm"
+    <form
+      id="contactForm"
       action="https://script.google.com/macros/s/AKfycbwOEMKYUW7vXqyukSfoySfzDA0YLHRZMK-3tfsCZ8v3cl8Kh3aaU9k5087FJqQeDt8EYA/exec"
-      method="POST">
-          <label for="empresa">Nombre de la empresa</label>
-          <input type="text" id="empresa" name="empresa" required />
-        
-          <label for="contactoNombre">Persona de contacto</label>
-          <input type="text" id="contactoNombre" name="contactoNombre" required />
-        
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required />
-        
-          <label for="pais">País</label>
-          <input type="text" id="pais" name="pais" required />
-        
-          <label for="producto">Tipo de producto</label>
-          <input type="text" id="producto" name="producto"
-                 placeholder="Chocolates, snacks, vinos, granos andinos, etc." required />
-        
-          <label for="mensaje">Mensaje</label>
-          <textarea id="mensaje" name="mensaje" required></textarea>
-        
-          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.3rem;">
-            Enviar mensaje
-          </button>
-        
-          <div id="successMessage" class="success-message">
-            Gracias, hemos recibido tu mensaje. Muy pronto nos pondremos en contacto contigo.
-          </div>
-        </form>
+      method="POST"
+      class="bg-white shadow-md rounded-2xl p-8 space-y-5 border border-slate-100"
+    >
+      <div>
+        <label for="empresa" class="block text-sm font-medium text-slate-700 mb-1">
+          Nombre de la empresa
+        </label>
+        <input
+          type="text"
+          id="empresa"
+          name="empresa"
+          required
+          class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+        />
+      </div>
+
+      <div>
+        <label for="contactoNombre" class="block text-sm font-medium text-slate-700 mb-1">
+          Persona de contacto
+        </label>
+        <input
+          type="text"
+          id="contactoNombre"
+          name="contactoNombre"
+          required
+          class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+        />
+      </div>
+
+      <div>
+        <label for="correo" class="block text-sm font-medium text-slate-700 mb-1">
+          Correo electrónico
+        </label>
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          required
+          class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+        />
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="pais" class="block text-sm font-medium text-slate-700 mb-1">
+            País de origen
+          </label>
+          <input
+            type="text"
+            id="pais"
+            name="pais"
+            required
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+          />
+        </div>
+
+        <div>
+          <label for="producto" class="block text-sm font-medium text-slate-700 mb-1">
+            Tipo de producto
+          </label>
+          <input
+            type="text"
+            id="producto"
+            name="producto"
+            required
+            placeholder="Chocolates, snacks, vinos, granos andinos, etc."
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+          />
+        </div>
+      </div>
+
+      <div>
+        <label for="mensaje" class="block text-sm font-medium text-slate-700 mb-1">
+          Mensaje
+        </label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="4"
+          required
+          class="w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-andean-green focus:border-andean-green"
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full px-6 py-3 rounded-lg bg-andean-green text-white font-semibold text-sm tracking-wide shadow-md hover:bg-emerald-700 hover:shadow-lg transition-all"
+      >
+        Enviar mensaje a Andean Export
+      </button>
+
+      <p
+        id="successMessage"
+        class="hidden text-center text-sm text-emerald-700 font-medium mt-2"
+      >
+        Gracias, hemos recibido tu mensaje. Nos pondremos en contacto contigo muy pronto.
+      </p>
+    </form>
+  </div>
+</section>
 
 
         <div class="contact-info">
